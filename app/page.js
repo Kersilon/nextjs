@@ -1,95 +1,49 @@
+import React from 'react'
+import styles from './about.module.css'
 import Image from 'next/image'
-import styles from './page.module.css'
 
-export default function Home() {
+export const metadata = {
+  title: 'About us'
+}
+
+const About = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+
+    <div className={styles.container}>
+      <div className={styles.imgContainer}>
+        <Image
+          src="https://img.freepik.com/free-vector/men-women-standing-long-queue-reception-3d-isometric-illustration_1284-55195.jpg?w=2000"
+          fill={true}
+          alt="Immagine sfondo about"
+          className={styles.img}
+        />
+        <div className={styles.imgText}>
+          <h1 className={styles.imgTitle}> Queue&Go </h1>
+          <h2 className={styles.imgDesc}> Web-app per la gestione facilitata delle file </h2>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+      <div className={styles.textContainer}>
+        <div className={styles.item}>
+          <h1 className={styles.title}> Chi siamo? </h1>
+          <p className={styles.desc}>
+            Siamo un trio dinamico di studenti del corso di Informatica dell&apos;Università di Salerno. Abbiamo unificato le nostre passioni e competenze per sviluppare questa web-app, nata come progetto per il nostro corso di Interazione Uomo-Macchina. Ogni membro del nostro team ha assunto un ruolo chiave per garantire il successo del nostro progetto: <br/>
+            <br/> Ersilio Petretta - Manager del gruppo e del design <br/>
+            Simone Scermino - Manager della documentazione <br/>
+            Roberto Andrei Miron - Manager della valutazione.
+            
           </p>
-        </a>
+        </div> 
+        <div className={styles.item}>
+          <h1 className={styles.title}> Qual è lo scopo della web-app? </h1>
+          <p className={styles.desc}>
+           Queue&Go è progettata per semplificare e migliorare la gestione delle code nelle varie attività commerciali e istituzioni, tra cui ristoranti, ospedali e molte altre.  Il nostro sito consente agli utenti di prenotare, monitorare e gestire il loro posto in coda in maniera efficace e intuitiva, offrendo un controllo senza precedenti sull&apos;esperienza d&apos;attesa. <br/>
+           Per i gestori delle attività, Queue&Go offre un metodo innovativo e efficiente per organizzare e gestire le code, migliorando il flusso di clienti e minimizzando l&apos;insoddisfazione che può derivare da lunghe attese. <br/>
+           <br/>Ci impegniamo a trasformare l&apos;attesa, spesso vista come un fastidio, in un processo fluido e controllato, risparmiando tempo prezioso sia ai clienti che ai fornitori di servizi.
+          </p>
+        </div> 
       </div>
-    </main>
+    </div>
   )
 }
+
+export default About
